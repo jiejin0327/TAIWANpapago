@@ -1,0 +1,291 @@
+
+<!-- saved from url=(0084)file:///C:/Users/user/Desktop/%E5%8F%B0%E7%81%A3PAPAGO/%E5%8F%B0%E7%81%A3PAPAGO.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>臺灣PaPaGO</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="file:///C:/Users/user/Desktop/%E5%8F%B0%E7%81%A3PAPAGO/main.css">
+        <script src="./台灣PAPAGO_files/jquery-3.4.1.slim.min.js.下載" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        
+        <script>
+            
+            
+            $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                  .exec(window.location.search);
+                return (results !== null) ? results[1] || 0 : false;
+            }
+            $(document).ready(function(){
+                var view = $.urlParam('view');
+                
+                var d = document.getElementById("color");
+                if(view==1)
+                    {
+                        d.style.backgroundColor = "#c48c31";
+                    }
+                if(view>=2 && view<=3)
+                    {
+                        d.style.backgroundColor = "#e3002c";
+                    }
+                
+                $('#viewPoint').text(viewPoint[view]);
+                $('#viewPointImage').attr("src", viewPointImageUrl[view]);
+                $('#viewPhoto a').attr("href", viewPointPhoto[view]);
+                $('#viewMap a').attr("href", viewPointMap[view]);
+                $('#viewWeb a').attr("href", viewPointWeb[view]);
+                $('#passage1-eng').text(passage1_eng[view]);
+                $('#passage2-eng').text(passage2_eng[view]);
+                $('#passage3-eng').text(passage3_eng[view]);
+                
+                
+                var passage1 = passage1Content[view][1];
+                if (passage1) {
+                    var var1 = passage1Content[view][0];
+                    var temp1 = "<a href=#passage1; onclick=showVar('var1') onMouseOver=showVar('var1')>@AA@</a>";
+                    var newVar1 = temp1.replace("@AA@", var1);
+                    passage1 = passage1.replace(var1, newVar1);
+                    $('#passage1-zh').html(passage1);
+                    
+                    $('#var1 p:first').text(var1Content[view][0]);
+                    $('#var1 p:nth-child(2)').text(var1Content[view][1]);
+                    $('#var1 p:nth-child(3)').text(var1Content[view][2]);
+                    $('#var1 p:nth-child(4)').text(var1Content[view][3]);
+                    $('#var1 p:nth-child(5)').text(var1Content[view][4]);
+                    
+                } else {
+                    $('#passage1-zh').hide();
+                }
+                
+                var passage2 = passage2Content[view][1];
+                if (passage2) {
+                    var var2 = passage2Content[view][0];
+                    var temp2 = "<a href=#passage2; onclick=showVar('var2') onMouseOver=showVar('var2')>@AA@</a>";
+                    var newVar2 = temp2.replace("@AA@", var2);
+                    passage2 = passage2.replace(var2, newVar2);
+                    $('#passage2-zh').html(passage2);
+                    
+                    $('#var2 p:first').text(var2Content[view][0]);
+                    $('#var2 p:nth-child(2)').text(var2Content[view][1]);
+                    $('#var2 p:nth-child(3)').text(var2Content[view][2]);
+                    
+                } else {
+                    $('#passage2-zh').hide();
+                }
+                
+                var passage3 = passage3Content[view][1];
+                if (passage3) {
+                    var d = document.getElementById("passage3");
+                    d.style.border =" 2px gray dashed";
+                    d.style.padding=" 5px";
+                    var var3 = passage3Content[view][0];
+                    var temp3 = "<a href=#passage3; onclick=showVar('var3') onMouseOver=showVar('var3')>@AA@</a>";
+                    var newVar3 = temp3.replace("@AA@", var3);
+                    passage3 = passage3.replace(var3, newVar3);
+                    $('#passage3-zh').html(passage3);
+                    
+                    $('#var3 p:first').text(var3Content[view][0]);
+                    $('#var3 p:nth-child(2)').text(var3Content[view][1]);
+                    $('#var3 p:nth-child(3)').text(var3Content[view][2]);
+                    
+                } else {
+                    $('#passage3-zh').hide();
+                }
+                
+
+                $('body').click(()=>{
+                   $('.var').hide(); 
+                });
+            });
+            function showVar(varId) {
+                $('.var').hide();
+                $('#'+varId).show();
+            }
+            function background(){
+                var color=$('.var')
+                if(view==1){$('.var').backgroundColor = "brown"}
+                if(view>=2 && view <=3){$('.var').backgroundColor = "pink"}
+            }
+            
+            
+        </script>
+    <style>
+            .var {
+                width: 50%;
+                height: 50%;
+                position: fixed;
+                top: 45%;
+                left: 50%;
+                margin: -200px 0 0 -30%;
+                display: table;
+                background : pink;
+                padding:20px 30px; 
+                z-index: 100;
+                box-shadow: 1px 2px 4px;
+                opacity: .95;
+                display: none;
+            }
+        </style>
+    
+    
+    </head>
+    <body>
+        
+        <div id=color style=padding:20px;margin-bottom:5px;> </div>
+        <h1 id="viewPoint" align="center">陽明山</h1>
+        <div style="text-align:center;">
+            <img width="90%" id="viewPointImage" alt="陽明山" src="./台灣PAPAGO_files/20170822-010904_U6077_M315105_e95d.jpg">
+            <br>
+            <div style="text-align: center">
+            <div id="viewPhoto" style="display: inline-block;">
+                <a href="https://www.google.com/search?rlz=1C1DLBX_zh-TWTW810TW813&amp;biw=1280&amp;bih=610&amp;tbm=isch&amp;sa=1&amp;ei=1_UrXcOUL7aXr7wPpvKs2As&amp;q=%E9%99%BD%E6%98%8E%E5%B1%B1&amp;oq=%E9%99%BD%E6%98%8E%E5%B1%B1&amp;gs_l=img.3..0l10.92725.96034..96598...0.0..0.44.465.15......0....1..gws-wiz-img.....0..35i39j0i24.aQth_GcnA6A" ;align="center"><img height="40px" src="https://icon-library.net/images/photo-icon-png/photo-icon-png-21.jpg"></a>
+            </div>
+            <div id="viewMap" style="display: inline-block;">
+                <a href="https://www.google.com/maps/place/%E9%99%BD%E6%98%8E%E5%B1%B1%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92/@25.1942462,121.5587476,17z/data=!3m1!4b1!4m5!3m4!1s0x3442adf824cfc74b:0x5c0be3a34fc3b079!8m2!3d25.1942462!4d121.5609363?hl=zh-TW"><img height="40px" src="https://icons-for-free.com/iconfiles/png/512/maps+navigation+pin+place+icon-1320167831530096671.png"></a>
+            </div>
+            <div id="viewWeb" style="display: inline-block;">    
+                <a href="https://www.ymsnp.gov.tw/index.php?option=com_content&amp;view=featured&amp;gp=0&amp;Itemid=104"><img height="40px" src="data:image/png;base64,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"></a>
+            </div>
+            </div>
+        </div>
+
+        <h2 align="center">華語短文</h2>
+        
+        <!--
+            短文
+        -->
+            
+        <div id="passage1" style="border:2px gray dashed;padding: 5px">
+            <p id="passage1-eng">
+            The month of March is a season of flowers and warm weather . Visitors arrive all day long in Yangmingshan . Strolling among the green mountains and on the green grass , they can enjoy fully the beauty of nature .
+            </p>    
+             <p id="passage1-zh">
+            三月，又到了一個群花爭豔、<a href="file:///C:/Users/user/Desktop/%E5%8F%B0%E7%81%A3PAPAGO/%E5%8F%B0%E7%81%A3PAPAGO.html#passage1" onclick="showVar(&#39;var1&#39;)" onmouseover="showVar(&#39;var1&#39;)">氣候</a>宜人的季節，陽明山上遊人如織，大家徜徉在青山綠草之間，沐浴在大自然的美景裡。
+            </p> 
+            <!--<div style="text-align:right">
+                <input type="button" value="learn more!" />
+            </div>-->
+        </div>
+        <br>
+        <div id="passage2" style="border:2px gray dashed;padding: 5px">
+            <p id="passage2-eng">
+            The effects of this crustal action extend to Taipei , where the Yangmingshan and Tatun mountain ranges remained volcanically active until just 200,000 years ago .
+            </p>
+            <p id="passage2-zh">
+                二十萬年前才結束火山噴發的陽明山國家公園，至今仍以大屯山的地熱、硫磺等火山遺跡<a href="file:///C:/Users/user/Desktop/%E5%8F%B0%E7%81%A3PAPAGO/%E5%8F%B0%E7%81%A3PAPAGO.html#passage2" onclick="showVar(&#39;var2&#39;)" onmouseover="showVar(&#39;var2&#39;)">傲人</a>。
+            </p>
+        </div>        
+        <br>
+        <div id="passage3">
+            <p id="passage3-eng">
+            " The reeds and rushes are ashy grey / The white dew has become frost " --The Book of Odes . The autumn winds give a deep sense of the season , and on Yangmingshan seas of blooming silvergrass plumes sway elegantly in the breeze . As they move , it is as if they were pulling back the curtains for the season .
+            </p>
+        
+            <p id="passage3-zh">
+                「蒹葭蒼蒼，白露為霜」，秋風正起，秋意漸濃，一望無際的芒花在陽明山盛開起來，<a href="file:///C:/Users/user/Desktop/%E5%8F%B0%E7%81%A3PAPAGO/%E5%8F%B0%E7%81%A3PAPAGO.html#passage3" onclick="showVar(&#39;var3&#39;)" onmouseover="showVar(&#39;var3&#39;)">宛如</a>白浪翻騰，漫漫的花海以數大為美之姿，舒展蒼茫的風韻，搖曳中為人們悄悄拉開了秋天的序幕。
+            </p>
+        </div>
+        
+        <div id="var1" class="var">
+            <p>氣候包括溫度、濕度、氣壓、風力、降水量、大氣粒子數及眾多其他氣象要素在很長時期及特定區域內的統計數據。與氣候相比，天氣是指這些氣象要素在近兩周內的實時狀態。
+            </p>
+            <p>一個地方的氣候是受該地的緯度、地形、海拔、冰雪覆蓋情況、以及附近水體及其水流狀況影響的。氣候可根據不同氣象要素的平均範圍和特殊範圍進行分類，最常採用溫度和降水量，其中最普遍使用的分類系統是柯本氣候分類法。1948年開始使用的桑斯維特費氣候分類系統[1]，在溫度和降水量兩個變量的基礎上增加土壤水分蒸散量，該系統應用於研究動物物種多樣性和氣候變化的潛在影響。伯傑龍和空間天氣分類系統側重於通過氣團的形成來確定某些地區的氣候狀況。
+            </p>
+            <p>古氣候學是對古代氣候的研究和描述。由於19世紀前氣候無法通過直接觀察獲得，因而古氣候是通過代理變量推斷得到的，這些代理變量包括非生物跡象如在湖床和冰核中發現的沉積物，以及生物跡象如樹木年輪和珊瑚生物。氣候模型是指包括古代，現代和未來的氣候的數學模型。
+            </p>
+             <p>古氣候學是對古代氣候的研究和描述。由於19世紀前氣候無法通過直接觀察獲得，因而古氣候是通過代理變量推斷得到的，這些代理變量包括非生物跡象如在湖床和冰核中發現的沉積物，以及生物跡象如樹木年輪和珊瑚生物。氣候模型是指包括古代，現代和未來的氣候的數學模型。
+            </p>
+             <p>古氣候學是對古代氣候的研究和描述。由於19世紀前氣候無法通過直接觀察獲得，因而古氣候是通過代理變量推斷得到的，這些代理變量包括非生物跡象如在湖床和冰核中發現的沉積物，以及生物跡象如樹木年輪和珊瑚生物。氣候模型是指包括古代，現代和未來的氣候的數學模型。
+            </p>
+        </div>
+        
+        <div id="var2" class="var">
+            <p>如果您剛剛建立了這一頁面，有可能是資料庫太忙而沒來得及更新；請等待幾分鐘並嘗試清除快取。
+            </p>
+            <p>在維基百科中，標題是大小寫敏感（首字母除外）且不能繁簡混用的；請檢查是否有相似的標題存在。如果您沒有發現混用繁簡但卻依然不能指向正確的標題，可以向我們提交錯誤報告。
+            </p>
+            <p>還有可能是這一頁面已被刪除。請檢查刪除日誌和Wikipedia:刪除方針上的一些理由。
+            </p>
+        </div>
+        
+        <div id="var3" class="var">
+            <p>委曲順從貌。《說文·人部》“僻”字下引《詩》：“宛如左僻。”今本《詩·魏風·葛屨》如作“然”，僻作“辟”。 毛 傳：“宛，辟貌。” 陳奐 傳疏：“宛，有委曲順從之義，故云辟貌。” 馬瑞辰 通釋：“按《説文》‘僻，辟也’，引《詩》‘宛如左僻’。如，猶然也。僻，即辟也。”
+            </p>
+            <p>好象；仿佛。唐 元稹 《青云驛》詩：“纔及 青云驛 ，忽遇蓬蒿妻；延我開蓽戶，鑿竇宛如圭。” 宋 何薳 《春渚紀聞·瓦缶冰花》：“既覆缶出水，而有餘水留缶，凝結成冰，視之，桃花一枝也，眾人觀，異之，以為偶然。明日用之，則又成開雙頭牡丹一枝。”
+            </p>
+            <p>宛如，電視劇《孝莊秘史》人物。即董鄂妃，也即孝獻端敬皇后（1638年-1660年），內大臣鄂碩之女，祖籍在遼寧佟佳江流域，其母為漢人。順治帝皇四子和碩榮親王生母。電視劇《孝莊秘史》中，由舒暢飾演BBBB。
+            </p>
+        </div>
+        
+        
+        <script>
+            var viewPoint = ['', '臺北市立動物園','北投公園', '陽明山'];
+            var viewPointImageUrl  = ['',
+               'https://photo.travelking.com.tw/scenery/6BAE69E4-3197-47E1-8FE4-7B7A39874159_e.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E5%8C%97%E6%8A%95%E6%BA%AB%E6%B3%89%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg/1200px-%E5%8C%97%E6%8A%95%E6%BA%AB%E6%B3%89%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg', 
+                'https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2017/08/22/20170822-010904_U6077_M315105_e95d.jpg?itok=3rw6SJ3f'];
+            var viewPointPhoto=['',
+               'https://www.google.com/search?q=%E5%8F%B0%E5%8C%97%E5%8B%95%E7%89%A9%E5%9C%92&rlz=1C1DLBX_zh-TWTW810TW813&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjRg_Cppo7kAhW3zIsBHTvKAtUQ_AUIEigC&biw=1280&bih=610',
+                'https://www.google.com/search?rlz=1C1DLBX_zh-TWTW810TW813&biw=1280&bih=610&tbm=isch&sa=1&ei=rUBaXeH2OtPemAW0qK2QBA&q=%E5%8C%97%E6%8A%95&oq=%E5%8C%97%E6%8A%95&gs_l=img.3..0l10.281378.283323..284026...0.0..0.39.230.7......0....1..gws-wiz-img.....0..0i24._i5yvhb_Q4k&ved=0ahUKEwihgbqrpo7kAhVTL6YKHTRUC0IQ4dUDCAY&uact=5',
+                'https://www.google.com/search?rlz=1C1DLBX_zh-TWTW810TW813&biw=1280&bih=610&tbm=isch&sa=1&ei=1_UrXcOUL7aXr7wPpvKs2As&q=%E9%99%BD%E6%98%8E%E5%B1%B1&oq=%E9%99%BD%E6%98%8E%E5%B1%B1&gs_l=img.3..0l10.92725.96034..96598...0.0..0.44.465.15......0....1..gws-wiz-img.....0..35i39j0i24.aQth_GcnA6A'];
+            var viewPointMap = ['',
+                'https://www.google.com/maps/place/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92/@24.9983469,121.5810358,15z/data=!4m5!3m4!1s0x0:0xaafe06fd09b4d766!8m2!3d24.9983469!4d121.5810358', 
+                'https://www.google.com/maps/place/%E5%8C%97%E6%8A%95%E6%BA%AB%E6%B3%89%E5%8D%9A%E7%89%A9%E9%A4%A8/@25.1365857,121.5049551,17z/data=!3m1!4b1!4m5!3m4!1s0x3442ae50f43af1e9:0xadf18f29697c0a3c!8m2!3d25.1365766!4d121.5071537?hl=zh-TW',
+                'https://goo.gl/maps/6geHUhSYF3kx4KWs6'];
+            var viewPointWeb=['',
+                             'https://english.zoo.gov.taipei/',
+                             'https://hotspringmuseum.taipei/News_Content.aspx?n=7F7676C34AC3FCF9&sms=CDFD835559552999&s=14090D7DD708233F',
+                             'https://www.ymsnp.gov.tw/index.php?option=com_content&view=featured&gp=0&Itemid=104'];
+            var passage1_eng=['',
+                             'On October 30th 1986 the new zoo at Mucha was officially opened , thirty times larger than the original , and at Yuanshan an era came to a close .',
+                             'But the Hot Springs Museum doesn &apos;t just chart the development of Peitou and tell the story of its springs ; its creation also sparked the idea of the " Peitou Eco-museum , " and it provides an excellent model for making new use of an historical site .'];
+            var passage2_eng=['',
+                             'According to statistics , an average of around 200,000 people visit Taipei Zoo each month . It takes only 20 minutes from the zoo to Maokong by cable car , so the city government estimates that the Maokong Gondola should bring on average about 20,000 visitors per day to Maokong .',
+                              'Long before Han Chinese arrived , Peitou had an aura of mystery about it , shadowy and wreathed in mist . For this reason the Aboriginal Ketagalan people living nearby named it " shamaness , " which in their language sounds similar to the Taiwanese pronunciation of the characters for " peitou . "'
+                             ];
+            var passage3_eng=['',
+                              'Such shocks are unknown at the current zoo in Mucha , partly because down through the years at Yuanshan , people came to understand animals a little better .',
+                              '',
+                              '" The reeds and rushes are ashy grey / The white dew has become frost " --The Book of Odes . The autumn winds give a deep sense of the season , and on Yangmingshan seas of blooming silvergrass plumes sway elegantly in the breeze . As they move , it is as if they were pulling back the curtains for the season .'
+                              ];
+            var passage1Content = [[],
+                ['規劃','因此台北市政府決定在木柵規劃一座比圓山大卅倍的動物園。七十五年十月卅一日，木柵動物園正式開幕，為圓山動物園的輝煌歷史劃上休止符。'],
+                ['博物館','北投溫泉博物館不僅紀錄著北投的發展、溫泉的故事，也帶動整個北投生態博物館觀念的形成，堪稱是古蹟再利用的最佳典範。'],
+                ['氣候','三月，又到了一個群花爭豔、氣候宜人的季節，陽明山上遊人如織，大家徜徉在青山綠草之間，沐浴在大自然的美景裡。']];
+            var passage2Content = [[],
+                ['統計','據統計，木柵動物園平均一個月有20萬人次的遊客，從動物園搭乘纜車上貓空，只要20分鐘就可到達。'],
+                ['之前','其實，早於漢人進入之前，籠罩在一片煙霧飄渺中的北投，充滿神秘感，因而被居住在附近的凱達格蘭族人稱為「女巫之地」，之後因為音似台語的「北投」而得名。'],
+                [ '火山','二十萬年前才結束火山噴發的陽明山國家公園，至今仍以大屯山的地熱、硫磺等火山遺跡傲人。']];
+            var passage3Content = [[],
+                ['動物園','這些缺失，在現在新穎、專業化的木柵動物園已不復見。多年來，人們也由圓山動物園認識了許多動物的習性。'],
+                [],
+                ['一望無際','「蒹葭蒼蒼，白露為霜」，秋風正起，秋意漸濃，一望無際的芒花在陽明山盛開起來，宛如白浪翻騰，漫漫的花海以數大為美之姿，舒展蒼茫的風韻，搖曳中為人們悄悄拉開了秋天的序幕。']];
+            var var1Content = [[],
+                ['規劃 guī huà','等級:6 詞性:VC','人生的自我追尋，當然可以事先組織規劃，訂定目標、進行分析，制定步驟，為未來擬定行動分針。(6)',
+                '這次的作業，如果不知道如何著手，你可以選擇生活中最重要的項目或是目前迫切突破的目標來規劃。(3)',
+                '今天舉辦的小型討論會，藉由互相激發靈感、導正觀念，期望學生正視自己，探討生涯，學會規劃未來藍圖。(6)'],
+                ['規劃','等級:6 詞性:VC','台中的自然科學博物館，是學習自然科學的有趣殿堂。(3)',
+                '故宮博物院是中國最大的博物館，它走過的路，某種程度上是中國文物博物館事業的一個縮影。(1)',
+                '對展覽品的內容提出回饋，鼓勵博物館的展覽走向更好的易用性和易理解性。(4)'],
+                ['規劃','等級:6 詞性:VC','當濫砍伐樹林時，卻沒有考慮到這將會引起哪些後果，諸如水土保持、資源枯竭、氣候變化、景觀破壞等問題。(4)',
+                '汙染的擴大，已使得酸雨、油汙染、森林大火，形成一股汙染鏈，引起世界性的氣候異常。(4)',
+                '高山氣候變化多端，一天之中體驗陰晴不定的情況，經歷春夏秋冬不同的感覺是司空見慣的事。(2)']];
+            var var2Content = [[],
+                ['透過大量個案的歸納、統計、分析，可以比較客觀地呈現那個時期普遍存在於個人、家庭、社會的問題。(5)',
+                '各家媒體做得此項社會實驗研究不免有些誇張，因為他們必須應用這些數字統計來爭取大眾目光。(5)',
+                '根據統計，這些自己調製出來的天然保養品所導致過敏或是刺激皮膚的機會反而更高。(5)'],
+                ['一旦決定可做或不可做某些事情後，要嚴格遵守。因此說「不可」之前，最好先三思再做決定。(3)',
+                '由於觸覺刺激具有首要和長久的效果，以及對別種感覺樣式的效應，因此可在一般活動或教育措施之前，事先施給孩童這類觸覺刺激。(4)',
+                '在放手讓幼兒自由探索之前，應該先讓幼兒熟悉玩具本身的特性並遵守，以養成對物體尊重的態度。(4)'],
+                ['不要把怨恨隱藏在心中，積怨久了，會像火山爆發一樣不可收拾。(5)',
+                '硬體的優勢若無軟體配合，就像一座死火山一般，發不出光和熱。(3)',
+                '板塊間會互相推擠，保持微妙平衡，如果這個平衡部份崩解，就會發生地震或火山爆發等地殼變動。(4)']];
+            var var3Content = [[],
+                ['因此，每當動物園裡引進了新的明星動物，不管是無尾熊還是熊貓，人們總是大排長龍想要看牠們一眼。(5)',
+                '迪士尼樂園不同於一般的公園或動物園，它在某個意義上禁止發自個人的即興遊戲或脫序。(4)',
+                '不要靠近有幼獅的母獅子，也不要靠近剛生了寶寶的母熊或是羚羊，因為牠們為了積極保護下一代，會有攻擊性，甚至連命都不要。(5)'],
+                [],
+                ['飛機的下方是灰暗色的厚厚卷雲，一望無際，像無邊無盡的平原。(4)',
+                '列車衝出茂密的闊葉林，行駛在一望無際的原野上。(6)',
+                '火車接近的港時，到了海岸邊，一望無際的海洋，點點船隻漂遊其上，從車窗望出去滿心清爽。(5)']];
+        </script>
+</body></html>
