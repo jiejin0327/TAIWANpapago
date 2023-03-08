@@ -1,12 +1,24 @@
-# TaiwanPAPAGO - 結合華語文教學的旅遊網頁
-
-作品介紹
-1. 本團隊以【認識臺灣、學習華語文】為目標，開發「臺灣PaPaGO」，提供旅遊資訊及學習華語的主題平台，讓「華語為第二語言學習者」來臺灣學習華語、在臺灣旅遊，除了遠端連網規劃臺灣旅遊，也可在旅途中使用。
-2. 以【臺灣在地城市小旅行】的方式接近學習者，學習者應用本系統查詢景點相關訊息：景點照片、景點地圖、景點英文官網等，運用對於景點的好奇激發華語學習的興趣，運用本系統做華語學習。
-3. 利用多元的華語文語料庫，藉由規劃設計「臺灣PaPaGO」以【雙北區域】為開發先導，提供臺灣旅遊景點資訊平台進而探索華語。
-
-作品連結:https://jiejin0327.github.io/TaiwanPAPAGO-traveling-and-learning-Chinese-website/
-
-![首頁地圖](https://github.com/jiejin0327/TaiwanPAPAGO/blob/master/image/map.png?raw=true)
-![系統架構圖](https://github.com/jiejin0327/TaiwanPAPAGO/blob/master/image/%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E5%9C%96.png?raw=true)
-![系統應用圖](https://github.com/jiejin0327/TaiwanPAPAGO/blob/master/image/%E7%B3%BB%E7%B5%B1%E6%87%89%E7%94%A8%E5%9C%96.png?raw=true)
+臺灣PaPaGO
+臺灣PaPaGO是一個提供旅遊資訊及學習華語文的主題平台，讓「華語為第二語言學習者」來臺灣學習華語、在臺灣旅遊，除了遠端連網規劃臺灣旅遊，也可在旅途中使用。
+目標
+本團隊以【認識臺灣、學習華語文】為目標，開發「臺灣PaPaGO」，利用多元的華語文語料庫，藉由規劃設計「臺灣PaPaGO」以【雙北區域】為開發先導，提供臺灣旅遊景點資訊平台進而探索華語。
+功能
+•	以路線作延伸，提供一站式的景點資訊平台，除了基本的旅遊資訊還有提供「光華雜誌」的短文，旅途中閱讀及學習華語文。
+•	以【臺灣在地城市小旅行】的方式接近學習者，學習者應用本系統查詢景點相關訊息：景點照片、景點地圖、景點英文官網等，運用對於景點的好奇激發華語學習的興趣。
+•	提供景點相關詞彙的中英「短文」、「生詞」、「例句」等華語文學習功能。
+安裝
+本作品是一個web應用程式，不需要安裝任何軟體。只要有連接到互聯網就可以使用。
+使用方法
+•	首頁(地圖)─路線地圖(捷運5+好行4)及景點性。
+•	景點性：
+o	旅遊資訊：從交通路性地圖查找性性性性性Google性、Google性圖、英性官性連結。
+o	華語性學性：提供性相關詞性中英「性文」、「生詞性」、「例句性」。
+•	主選單─提供階層式展開選單，可以查找各路性下性。
+相關連結
+•	GitHub repository
+•	Demo website
+•	Presentation slides
+聯絡方式
+如果您有任何問題或建議，歡迎與我們聯絡：
+•	Email: your_email_address@gmail.com
+•	Facebook: https://www.facebook.com/your_facebook_page
