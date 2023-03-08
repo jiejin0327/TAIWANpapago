@@ -25,9 +25,9 @@
 - 主選單─提供階層式展開選單，可以查找各路性下性。
 
 ## 相關連結
-- [Demo website](https://jiejin0327.github.io/TaiwanPAPAGO-traveling-and-learning-Chinese-website/)
-- [project plan](https://github.com/jiejin0327/TaiwanPAPAGO-traveling-and-learning-Chinese-website/blob/master/report/2019%20%E8%8F%AF%E8%AA%9E%E6%96%87%E6%95%99%E5%AD%B8%E6%87%89%E7%94%A8%E8%BB%9F%E9%AB%94%E7%AB%B6%E8%B3%BD%EF%BC%9A%E8%87%BA%E7%81%A3PaPaGO_%E4%BC%81%E5%8A%83%E6%9B%B8.docx)
-- [Presentation slides](https://your_presentation_slides.com)
+- [作品連結](https://jiejin0327.github.io/TaiwanPAPAGO-traveling-and-learning-Chinese-website/)
+- [專案企劃書](https://github.com/jiejin0327/TaiwanPAPAGO-traveling-and-learning-Chinese-website/blob/master/report/2019%20%E8%8F%AF%E8%AA%9E%E6%96%87%E6%95%99%E5%AD%B8%E6%87%89%E7%94%A8%E8%BB%9F%E9%AB%94%E7%AB%B6%E8%B3%BD%EF%BC%9A%E8%87%BA%E7%81%A3PaPaGO_%E4%BC%81%E5%8A%83%E6%9B%B8.docx)
+- [專案簡報](https://your_presentation_slides.com)
 
 ## 作品展示
 
