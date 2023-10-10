@@ -18,7 +18,7 @@
 - 前端: HTML, CSS, JavaScript
 - 後端: Node.js, Express
 - 資料庫: MySQL
-​- 版本控制: Git
+- 版本控制: Git
 - 網站部屬: Docker, AWS
 
 ## 使用方法
